@@ -1,14 +1,18 @@
 const Crawler = require('easycrawler')
 const cheerio = require('cheerio')
-let argv = require('yargs').argv
+const argv = require('yargs').argv
 
 let url = argv.url
-if (url.indexOf('https:') == -1) url = 'https://' + url
+let thread = argv.thred || 1
+let depth = argv.depth || 3
+let debug = argv.debug
+
+if (argv.url.indexOf('https:') == -1) url = 'https://' + url
 let goodCount = 0, badCount = 0
 let crawler = new Crawler({
-    thread: 1,
-    //logs: true,
-    depth: 5,
+    thread: thread,
+    logs: debug,
+    depth: depth,
     headers: {'user-agent': 'foobar'},
     onlyCrawl: [url], //will only crawl urls containing these strings
     //reject : ['rutube'], //will reject links containing rutube
@@ -67,8 +71,10 @@ let crawler = new Crawler({
         console.log(`\nCrawled ${urls.crawled.length} pages`)
         console.log(`${goodCount} pages are good`)
         console.log(`${badCount} pages have mixed HTTP/HTTPS content`)
-        console.log(urls.discovered) //urls.discovered for discovered urls
-        //console.log(urls.crawled) //urls.crawled for visited urls;
+        if (debug) {
+            console.log(urls.discovered)
+            console.log(urls.crawled)
+        }
     }
 })
 crawler.crawl(url)
