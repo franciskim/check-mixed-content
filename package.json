@@ -1,0 +1,32 @@
+{
+  "name": "check-mixed-content",
+  "version": "0.0.1",
+  "description": "Checks for mixed content a.k.a. HTTP references on HTTPS, very alpha.",
+  "main": "index.js",
+  "dependencies": {
+    "easycrawler": "latest",
+    "cheerio": "latest",
+    "yargs": "latest"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "http",
+    "https",
+    "ssl",
+    "mixed",
+    "content",
+    "check",
+    "checker",
+    "crawler",
+    "crawl",
+    "spider"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npm/npm.git"
+  },
+  "author": "Francis Kim <hello@franciskim.co> (https://franciskim.co)",
+  "license": "ISC"
+}
