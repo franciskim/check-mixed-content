@@ -1,6 +1,6 @@
 ### Usage
 ```
-npm i
+npm i check-mixed-content
 node index.js --url franciskim.co
 ```
 
