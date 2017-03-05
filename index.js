@@ -77,6 +77,9 @@ let crawler = new Crawler({
             console.log(urls.discovered)
             console.log(urls.crawled)
         }
+        if (badCount) {
+            process.exitCode = 1
+        }
     }
 })
 crawler.crawl(url)
