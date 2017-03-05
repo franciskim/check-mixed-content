@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const Crawler = require('easycrawler')
 const cheerio = require('cheerio')
 const argv = require('yargs').argv

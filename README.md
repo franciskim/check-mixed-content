@@ -1,7 +1,7 @@
 ### Usage
 ```
 npm i check-mixed-content
-node index.js --url franciskim.co
+check-mixed-content --url franciskim.co
 ```
 
 ### Options
