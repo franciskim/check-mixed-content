@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+'use strict';
 const Crawler = require('easycrawler')
 const cheerio = require('cheerio')
 const argv = require('yargs').argv
@@ -19,7 +20,7 @@ let crawler = new Crawler({
     //reject : ['rutube'], //will reject links containing rutube
     onSuccess: function (data) {
         let bad = false
-        $ = cheerio.load(data.body)
+        let $ = cheerio.load(data.body)
         $('img').each(function () {
             if ($(this).attr('src')) bad = $(this).attr('src').indexOf('http:') > -1
             if ($(this).attr('srcset')) bad = $(this).attr('srcset').indexOf('http:') > -1
