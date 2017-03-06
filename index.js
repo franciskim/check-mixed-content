@@ -50,7 +50,7 @@ let crawler = new Crawler({
             if ($(this).attr('src')) bad = $(this).attr('src').indexOf('http:') > -1
             if ($(this).attr('srcset')) bad = $(this).attr('srcset').indexOf('http:') > -1
         })
-        $('params').each(function () {
+        $('param').each(function () {
             if ($(this).attr('value')) bad = $(this).attr('value').indexOf('http:') > -1
         })
         $('link').each(function () {
