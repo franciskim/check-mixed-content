@@ -5,7 +5,7 @@ const cheerio = require('cheerio')
 const argv = require('yargs').argv
 
 let url = argv.url
-let thread = argv.thred || 1
+let thread = argv.thread || 1
 let depth = argv.depth || 3
 let debug = argv.debug
 
