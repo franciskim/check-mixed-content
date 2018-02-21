@@ -5,8 +5,9 @@
   "main": "index.js",
   "bin": "./index.js",
   "dependencies": {
-    "easycrawler": "latest",
     "cheerio": "latest",
+    "colors": "^1.1.2",
+    "easycrawler": "latest",
     "yargs": "latest"
   },
   "scripts": {
